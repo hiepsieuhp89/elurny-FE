@@ -1,20 +1,17 @@
 import { createBrowserRouter } from "react-router-dom";
-
-import AdminLayout from "@/layouts/AdminLayout";
 import MainLayout from "@/layouts/MainLayout";
 import ProtectedLayout, {
   loader as userLoader,
 } from "@/layouts/ProtectedLayout";
 import RootLayout from "@/layouts/RootLayout";
-import QuestListPage from "@/pages/admin/quest-list";
-import AddQuestPage from "@/pages/admin/add-quest";
-import LeaderboardPage from "@/pages/admin/leaderboard";
-import Home from "@/pages/public/Home";
-import FeedsPage from "@/pages/public/Feeds";
-import MyBoxPage from "@/pages/public/MyBox";
-import QuestDetails from "@/pages/public/QuestDetails";
+import HomePage from "@/pages/HomePage";
 import ErrorPage from "@/components/ErrorPage";
-
+import ProductsPage from "@/pages/ProductsPage";
+import SubProductsPage from "@/pages/SubProductsPage";
+import SolutionsPage from "@/pages/SolutionsPage";
+import GetInTouchPage from "@/pages/GetInTouchPage";
+import BlogPage from "@/pages/BlogPage";
+import AboutUsPage from "@/pages/AboutUsPage";
 const routesConfig = [
   {
     element: <RootLayout />,
@@ -34,53 +31,35 @@ const routesConfig = [
             children: [
               {
                 index: true,
-                element: <Home />,
+                element: <HomePage />,
               },
               {
-                path: "quest-list",
-                element: <QuestListPage />,
+                path: "product",
+                element: <ProductsPage />,
               },
               {
-                path: "quest-list/:id",
-                element: <QuestDetails />,
+                path: "sub-product",
+                element: <SubProductsPage />,
               },
               {
-                path: "feed",
-                element: <FeedsPage />,
+                path: "solutions",
+                element: <SolutionsPage />,
               },
               {
-                path: "my-box",
-                element: <MyBoxPage />,
+                path: "get-in-touch",
+                element: <GetInTouchPage />,
+              },
+              {
+                path: "blog",
+                element: <BlogPage />,
+              },
+              {
+                path: "about-us",
+                element: <AboutUsPage />,
               }
             ]
           },
-          {
-            path: "admin",
-            element: <AdminLayout />,
-            errorElement: <ErrorPage />,
-            children: [
-              {
-                path: "quest-list",
-                element: <QuestListPage />,
-              },
-              {
-                path: "quest-list/add",
-                element: <AddQuestPage />,
-              },
-              {
-                path: "quest-list/edit/:id",
-                element: <AddQuestPage />,
-              },
-              {
-                path: "quest-list/leaderboard",
-                element: <LeaderboardPage />,
-              },
-              {
-                path: "quest-details/:id",
-                element: <AddQuestPage />,
-              },
-            ],
-          },
+      
         ],
       },
     ],
