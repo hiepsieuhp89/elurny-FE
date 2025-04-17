@@ -1,0 +1,106 @@
+{
+  "root": true,
+  "env": {
+    "browser": true,
+    "es2021": true,
+    "node": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:react-hooks/recommended",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": "latest",
+    "sourceType": "module",
+    "project": "./tsconfig.json"
+  },
+  "plugins": [
+    "react", 
+    "react-hooks", 
+    "@typescript-eslint",
+    "import",
+    "simple-import-sort"
+  ],
+  "rules": {
+    // React
+    "react/react-in-jsx-scope": "off",
+    "react/prop-types": "off",
+    "react/require-default-props": "off",
+    "react/function-component-definition": "off",
+    "react/jsx-no-useless-fragment": "warn",
+    "react/jsx-no-constructed-context-values": "warn",
+    "react/no-array-index-key": "warn",
+    "react/button-has-type": "warn",
+    
+    // Hooks
+    "react-hooks/exhaustive-deps": "warn",
+    
+    // TypeScript
+    "@typescript-eslint/no-unused-vars": "warn",
+    "@typescript-eslint/no-shadow": "warn",
+    "@typescript-eslint/no-use-before-define": "warn",
+    "@typescript-eslint/naming-convention": "warn",
+    
+    // Import
+    "import/no-cycle": "off",
+    "import/extensions": "off",
+    "import/no-unresolved": "off",
+    "import/order": "off",
+    "import/no-extraneous-dependencies": "off",
+    
+    // General
+    "no-unused-vars": "off",
+    "no-console": ["warn", { "allow": ["warn", "error"] }],
+    "no-param-reassign": ["warn", { 
+      "props": true, 
+      "ignorePropertyModificationsFor": [
+        "state", 
+        "acc", 
+        "draft", 
+        "accumulator", 
+        "e",
+        "ctx",
+        "req",
+        "request",
+        "res",
+        "response",
+        "staticContext"
+      ] 
+    }],
+    "no-underscore-dangle": ["warn", { "allow": ["_id"] }],
+    "consistent-return": "warn",
+    "no-nested-ternary": "warn",
+    "no-plusplus": "off",
+    "no-prototype-builtins": "warn",
+    "no-restricted-syntax": "warn",
+    "guard-for-in": "warn",
+    "spaced-comment": "warn",
+    "no-useless-escape": "warn",
+    
+    // A11y
+    "jsx-a11y/click-events-have-key-events": "warn",
+    "jsx-a11y/no-static-element-interactions": "warn",
+    "jsx-a11y/anchor-is-valid": "warn",
+    "jsx-a11y/no-noninteractive-tabindex": "warn",
+    "jsx-a11y/control-has-associated-label": "warn",
+    "jsx-a11y/label-has-associated-control": "warn",
+    "jsx-a11y/img-redundant-alt": "warn",
+    "jsx-a11y/heading-has-content": "warn"
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    },
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+      }
+    }
+  }
+} 
