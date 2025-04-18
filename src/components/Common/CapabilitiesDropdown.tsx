@@ -78,7 +78,7 @@ export default function CapabilitiesDropdown({ data }: CapabilitiesDropdownProps
                     <TabsTrigger
                       key={category.id}
                       value={category.id}
-                      className="data-[state=active]:bg-mainActiveV1 data-[state=active]:text-white"
+                      className="data-[state=active]:bg-mainVioletV1 data-[state=active]:text-white"
                     >
                       {category.name}
                     </TabsTrigger>

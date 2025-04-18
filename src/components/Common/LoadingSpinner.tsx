@@ -9,7 +9,7 @@ interface LoadingSpinnerProps {
 const LoadingSpinner = ({ 
   size = 40, 
   className = '',
-  color = 'border-mainColorV1'
+  color = 'border-[#764DAE]'
 }: LoadingSpinnerProps) => {
   return (
     <div className={`flex justify-center items-center ${className}`}>

@@ -167,7 +167,7 @@ const AboutUs = () => {
                                         <div className="text-3xl mb-4">{card.icon}</div>
                                         <h3 className="text-xl font-semibold mb-3">{card.title}</h3>
                                         <p className="text-secondaryText mb-4">{card.description}</p>
-                                        <Button variant="link" className="text-mainActiveV1 p-0">
+                                        <Button variant="link" className="text-mainVioletV1 p-0">
                                             {card.link}
                                         </Button>
                                     </motion.div>
@@ -187,10 +187,10 @@ const AboutUs = () => {
             {/* By the Numbers Section */}
             <section className="py-12 px-4 md:px-8 lg:px-16 max-w-7xl mx-auto">
                 {loading ? (
-                    <Skeleton className="h-64 w-full bg-mainActiveV1 rounded-lg" />
+                    <Skeleton className="h-64 w-full bg-mainVioletV1 rounded-lg" />
                 ) : (
                     <motion.div
-                        className="bg-mainActiveV1 rounded-lg p-8 text-center"
+                        className="bg-mainVioletV1 rounded-lg p-8 text-center"
                         initial="hidden"
                         animate="visible"
                         variants={fadeInUp}
@@ -240,10 +240,10 @@ const AboutUs = () => {
             {/* Impact Section */}
             <section className="py-12 px-4 md:px-8 lg:px-16 max-w-7xl mx-auto">
                 {loading ? (
-                    <Skeleton className="h-64 w-full bg-mainActiveV1 rounded-lg" />
+                    <Skeleton className="h-64 w-full bg-mainVioletV1 rounded-lg" />
                 ) : (
                     <motion.div
-                        className="bg-mainActiveV1 rounded-lg p-8 text-center"
+                        className="bg-mainVioletV1 rounded-lg p-8 text-center"
                         initial="hidden"
                         animate="visible"
                         variants={fadeInUp}
@@ -251,7 +251,7 @@ const AboutUs = () => {
                         <h2 className="text-3xl font-bold mb-4">
                             Together we can impact <span className="font-normal">how teams work across the globe</span>
                         </h2>
-                        <Button className="bg-white text-mainActiveV1 hover:bg-gray-100 mt-4">Join our team</Button>
+                        <Button className="bg-white text-mainVioletV1 hover:bg-gray-100 mt-4">Join our team</Button>
                     </motion.div>
                 )}
             </section>
@@ -341,7 +341,7 @@ const AboutUs = () => {
                                         alt={`Social media ${index + 1}`}
                                         className="w-full h-auto rounded-lg"
                                     />
-                                    <div className="absolute inset-0 bg-mainActiveV1 bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300 rounded-lg flex items-center justify-center">
+                                    <div className="absolute inset-0 bg-mainVioletV1 bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300 rounded-lg flex items-center justify-center">
                                         <Button
                                             variant="ghost"
                                             size="icon"
@@ -358,7 +358,7 @@ const AboutUs = () => {
             </section>
 
             {/* Final CTA Section */}
-            <section className="py-12 px-4 md:px-8 lg:px-16 bg-mainActiveV1">
+            <section className="py-12 px-4 md:px-8 lg:px-16 bg-mainVioletV1">
                 {loading ? (
                     <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-8">
                         <div className="space-y-4">
@@ -381,7 +381,7 @@ const AboutUs = () => {
                                 accomplish more, together
                             </h2>
                             <p className="text-white opacity-80">Join the thousands of teams already using lurny.com</p>
-                            <Button className="bg-white text-mainActiveV1 hover:bg-gray-100">Join our team</Button>
+                            <Button className="bg-white text-mainVioletV1 hover:bg-gray-100">Join our team</Button>
                         </motion.div>
                         <motion.div variants={fadeInUp}>
                             <img src="/images/sample-img.png" alt="Team collaboration" className="rounded-lg w-full h-auto" />

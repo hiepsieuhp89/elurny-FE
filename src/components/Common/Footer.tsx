@@ -35,18 +35,18 @@ export default function Footer() {
               viewport={{ once: true }}
             >
               <a href="/" className="flex items-center mb-4">
-                <span className="text-mainActiveV1 font-bold text-2xl">e</span>
+                <span className="text-mainVioletV1 font-bold text-2xl">e</span>
                 <span className="text-mainText font-bold text-2xl">Lurny</span>
               </a>
               <p className="text-secondaryText text-sm mb-6">Transformative Modern Learning for the Digital World</p>
               <div className="flex space-x-4">
-                <a href="#" className="text-secondaryText hover:text-mainActiveV1 transition-colors">
+                <a href="#" className="text-secondaryText hover:text-mainVioletV1 transition-colors">
                   <IconBrandLinkedin size={20} />
                 </a>
-                <a href="#" className="text-secondaryText hover:text-mainActiveV1 transition-colors">
+                <a href="#" className="text-secondaryText hover:text-mainVioletV1 transition-colors">
                   <IconBrandTwitter size={20} />
                 </a>
-                <a href="#" className="text-secondaryText hover:text-mainActiveV1 transition-colors">
+                <a href="#" className="text-secondaryText hover:text-mainVioletV1 transition-colors">
                   <IconBrandYoutube size={20} />
                 </a>
               </div>
@@ -65,7 +65,7 @@ export default function Footer() {
                 <ul className="space-y-2">
                   {column.links.map((link) => (
                     <li key={link}>
-                      <a href="#" className="text-secondaryText hover:text-mainActiveV1 transition-colors text-sm">
+                      <a href="#" className="text-secondaryText hover:text-mainVioletV1 transition-colors text-sm">
                         {link}
                       </a>
                     </li>

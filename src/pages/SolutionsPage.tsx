@@ -41,8 +41,6 @@ export default function SolutionsPage() {
 
     return (
         <div className="min-h-screen bg-mainBackgroundV1 text-mainText">
-            <Header />
-
             {isLoading ? (
                 <LoadingSpinner />
             ) : (
@@ -58,7 +56,7 @@ export default function SolutionsPage() {
                                     <p className="text-lg md:text-xl text-secondaryText max-w-xl">
                                         AI-powered, multi-lingual platform designed to manage, measure, and deliver learning from anywhere.
                                     </p>
-                                    <Button className="bg-mainActiveV1 hover:bg-mainActiveV1/90 text-white px-8 py-6 rounded-md text-lg">
+                                    <Button className="bg-mainVioletV1 hover:bg-mainVioletV1/90 text-white px-8 py-6 rounded-md text-lg">
                                         Get Started
                                     </Button>
                                 </motion.div>
@@ -101,7 +99,7 @@ export default function SolutionsPage() {
                                     transition={{ duration: 0.8 }}
                                     className="space-y-6"
                                 >
-                                    <div className="inline-block px-4 py-1 bg-mainActiveV1/20 text-mainActiveV1 rounded-full text-sm font-medium">
+                                    <div className="inline-block px-4 py-1 bg-mainVioletV1/20 text-mainVioletV1 rounded-full text-sm font-medium">
                                         PLATFORM FEATURES & SOLUTIONS
                                     </div>
                                     <h2 className="text-3xl md:text-4xl font-bold">
@@ -122,12 +120,12 @@ export default function SolutionsPage() {
                                                 transition={{ delay: index * 0.1, duration: 0.5 }}
                                                 className="flex items-start gap-3"
                                             >
-                                                <span className="text-mainActiveV1 mt-1">•</span>
+                                                <span className="text-mainVioletV1 mt-1">•</span>
                                                 <span>{feature}</span>
                                             </motion.li>
                                         ))}
                                     </ul>
-                                    <Button className="bg-mainActiveV1 hover:bg-mainActiveV1/90 text-white px-6 py-2 rounded-md">
+                                    <Button className="bg-mainVioletV1 hover:bg-mainVioletV1/90 text-white px-6 py-2 rounded-md">
                                         See More Features
                                     </Button>
                                 </motion.div>
@@ -170,7 +168,7 @@ export default function SolutionsPage() {
                                         <Card className="bg-mainCardV1 border-none h-full">
                                             <CardHeader className="pb-2">
                                                 <div className={`w-12 h-12 rounded-md flex items-center justify-center ${color}`}>
-                                                    <span className="text-mainActiveV1">{card.icon}</span>
+                                                    <span className="text-mainVioletV1">{card.icon}</span>
                                                 </div>
                                             </CardHeader>
                                             <CardContent>
@@ -195,7 +193,7 @@ export default function SolutionsPage() {
                                     transition={{ duration: 0.8 }}
                                     className="space-y-6"
                                 >
-                                    <div className="inline-block px-4 py-1 bg-mainActiveV1/20 text-mainActiveV1 rounded-full text-sm font-medium">
+                                    <div className="inline-block px-4 py-1 bg-mainVioletV1/20 text-mainVioletV1 rounded-full text-sm font-medium">
                                         SECURITY
                                     </div>
                                     <h2 className="text-3xl md:text-4xl font-bold">Security by Design. Privacy by Default.</h2>
@@ -210,7 +208,7 @@ export default function SolutionsPage() {
                                                 transition={{ delay: index * 0.1, duration: 0.5 }}
                                                 className="flex items-start gap-3"
                                             >
-                                                <span className="text-mainActiveV1 mt-1">{feature.icon}</span>
+                                                <span className="text-mainVioletV1 mt-1">{feature.icon}</span>
                                                 <span>{feature.text}</span>
                                             </motion.li>
                                         ))}
@@ -268,7 +266,7 @@ export default function SolutionsPage() {
                                         <div className="lg:col-span-2">
                                             <h3 className="text-2xl font-bold mb-3">{section.title}</h3>
                                             <p className="text-secondaryText mb-4">{section.description}</p>
-                                            <a href={section.learnMoreLink} className="text-mainActiveV1 hover:text-mainActiveV1/80 inline-flex items-center">
+                                            <a href={section.learnMoreLink} className="text-mainVioletV1 hover:text-mainVioletV1/80 inline-flex items-center">
                                                 Learn More
                                             </a>
                                         </div>
@@ -286,7 +284,7 @@ export default function SolutionsPage() {
                                 transition={{ duration: 0.6, delay: 0.3 }}
                                 className="mt-12 text-center"
                             >
-                                <Button className="bg-mainActiveV1 hover:bg-mainActiveV1/90 text-white px-8 py-3 rounded-md">
+                                <Button className="bg-mainVioletV1 hover:bg-mainVioletV1/90 text-white px-8 py-3 rounded-md">
                                     See All Solutions
                                 </Button>
                             </motion.div>
@@ -328,7 +326,7 @@ export default function SolutionsPage() {
                                 className="space-y-6"
                             >
                                 <h2 className="text-4xl md:text-5xl font-bold">
-                                    <span className="text-mainActiveV1">Ready to talk?</span>
+                                    <span className="text-mainVioletV1">Ready to talk?</span>
                                     <br />
                                     <span className="text-accentColor">Get in touch.</span>
                                 </h2>
@@ -342,7 +340,6 @@ export default function SolutionsPage() {
                     </section>
                 </>
             )}
-            <Footer />
         </div>
     )
 }

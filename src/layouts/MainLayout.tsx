@@ -1,11 +1,10 @@
 import { motion } from "framer-motion";
-import React, { useEffect, useState } from "react";
+import React, { Suspense, useEffect, useState } from "react";
 import { Outlet } from "react-router-dom";
-
-import Sidebar from "@/components/Common/Sidebar";
-import MobileMenu from "@/components/Common/MobileMenu";
 import { useMobile } from "@/hooks/useMobile";
-
+import Header from "@/components/Common/Header";
+import Footer from "@/components/Common/Footer";
+import LoadingSpinner from "@/components/Common/LoadingSpinner";
 function MainLayout(): React.ReactElement {
   const [isLoading, setIsLoading] = useState(true);
   const isMobile = useMobile(768);
@@ -30,20 +29,13 @@ function MainLayout(): React.ReactElement {
   }
 
   return (
-    <div className={`${isMobile ? 'overflow-x-hidden' : ''} min-h-screen bg-backgroundColorV1`}>
-      {/* Desktop Sidebar - chỉ hiển thị ở màn hình lớn hơn 768px */}
-      {!isMobile && <Sidebar />}
-      
-      {/* Mobile Menu - chỉ hiển thị ở màn hình nhỏ hơn 768px */}
-      {isMobile && <MobileMenu />}
-      
-      {/* Main Content */}
-      <div className={`flex flex-col ${!isMobile ? 'lg:pl-20' : ''}`}>
-        <main className="flex-1">
+    <div className="w-full bg-mainDarkBackgroundV1">
+        <Suspense fallback={<LoadingSpinner />}>
+          <Header />
           <Outlet />
-        </main>
+          <Footer />
+        </Suspense>
       </div>
-    </div>
   );
 }
 

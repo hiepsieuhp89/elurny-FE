@@ -12,7 +12,7 @@ export const capabilitiesData = {
             id: "engineering",
             title: "Engineering Engine",
             description: "Create and publish interactive learning experiences for APIs, SDKs, and more.",
-            icon: <IconBrain size={ 24} className = "text-mainActiveV1" />,
+            icon: <IconBrain size={ 24} className = "text-mainVioletV1" />,
         category: "core",
         },
     {
@@ -58,50 +58,50 @@ export const featureCardsData = [
         id: "interface",
         title: "A user interface that is in tune with the times",
         description: "Modern, intuitive interface designed for optimal learning experience",
-        image: "/images/sample-img.png",
+        image: "/images/home/feature1.png",
     },
     {
         id: "microlessons",
         title: "Create microlessons in just seconds from webpages, YouTube videos, PDFs, images, docs, files",
         description: "Transform any content into bite-sized learning modules quickly",
-        image: "/images/sample-img.png",
+        image: "/images/home/feature2.png",
     },
     {
         id: "knowledge",
         title: "Instant just-in-time knowledge transfer using Micro LLM trained on your content",
         description: "AI-powered knowledge delivery when and where it's needed",
-        image: "/images/sample-img.png",
+        image: "/images/home/feature3.png",
     },
     {
         id: "collections",
         title: "Organize your learning in collections and share with your colleagues",
         description: "Structured learning paths that can be easily shared across teams",
-        image: "/images/sample-img.png",
+        image: "/images/home/feature4.png",
     },
     {
         id: "videos",
         title: "Create instructional videos, PPTs and podcasts in two-hop a minute and share with your team",
         description: "Quick content creation tools for various learning formats",
-        image: "/images/sample-img.png",
+        image: "/images/home/feature5.png",
     },
     {
         id: "courses",
         title: "Create and upload courses in minutes",
         description: "Streamlined course creation and deployment process",
-        image: "/images/sample-img.png",
+        image: "/images/home/feature6.png",
     },
     {
         id: "simulation",
         title:
             "Simulation - a gamified skill advantage builder to practice and learn with hands-on product skills in an engaging, interactive journey",
         description: "Learn by doing in a risk-free environment",
-        image: "/images/sample-img.png",
+        image: "/images/home/feature7.png",
     },
     {
         id: "api",
         title: "The Lurny API Toolkit tool for developers to build applications of custom learning experiences they are",
         description: "Extend and customize the platform to meet your specific needs",
-        image: "/images/sample-img.png",
+        image: "/images/home/feature8.png",
     },
 ]
 
@@ -133,7 +133,7 @@ export const enterpriseData = {
                 "Collaborative learning communities",
                 "Leadership mentoring programs",
             ],
-            color: "bg-mainActiveV1",
+            color: "bg-mainVioletV1",
         },
         {
             id: "compliance",

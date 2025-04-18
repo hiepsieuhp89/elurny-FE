@@ -47,8 +47,6 @@ export default function Blog() {
 
     return (
         <div className="min-h-screen flex flex-col bg-mainBackgroundV1 text-mainText">
-            <Header />
-
             <main className="flex-grow">
                 {/* Hero Section */}
                 <section className="py-16 md:py-24">
@@ -136,7 +134,7 @@ export default function Blog() {
                                     size="icon"
                                     onClick={() => setCurrentPage(Math.max(1, currentPage - 1))}
                                     disabled={currentPage === 1}
-                                    className="bg-mainCardV1 border-mainCardV1 hover:bg-mainActiveV1/10"
+                                    className="bg-mainCardV1 border-mainCardV1 hover:bg-mainVioletV1/10"
                                 >
                                     <IconChevronLeft className="h-4 w-4" />
                                 </Button>
@@ -164,8 +162,8 @@ export default function Blog() {
                                             onClick={() => setCurrentPage(pageNum)}
                                             className={
                                                 currentPage === pageNum
-                                                    ? "bg-mainActiveV1 hover:bg-mainActiveV1/90 w-10 h-10"
-                                                    : "bg-mainCardV1 border-mainCardV1 hover:bg-mainActiveV1/10 w-10 h-10"
+                                                    ? "bg-mainVioletV1 hover:bg-mainVioletV1/90 w-10 h-10"
+                                                    : "bg-mainCardV1 border-mainCardV1 hover:bg-mainVioletV1/10 w-10 h-10"
                                             }
                                         >
                                             {pageNum}
@@ -182,7 +180,7 @@ export default function Blog() {
                                             variant="outline"
                                             size="icon"
                                             onClick={() => setCurrentPage(totalPages)}
-                                            className="bg-mainCardV1 border-mainCardV1 hover:bg-mainActiveV1/10 w-10 h-10"
+                                            className="bg-mainCardV1 border-mainCardV1 hover:bg-mainVioletV1/10 w-10 h-10"
                                         >
                                             {totalPages}
                                         </Button>
@@ -194,7 +192,7 @@ export default function Blog() {
                                     size="icon"
                                     onClick={() => setCurrentPage(Math.min(totalPages, currentPage + 1))}
                                     disabled={currentPage === totalPages}
-                                    className="bg-mainCardV1 border-mainCardV1 hover:bg-mainActiveV1/10"
+                                    className="bg-mainCardV1 border-mainCardV1 hover:bg-mainVioletV1/10"
                                 >
                                     <IconChevronRight className="h-4 w-4" />
                                 </Button>
@@ -203,8 +201,6 @@ export default function Blog() {
                     </div>
                 </section>
             </main>
-
-            <Footer />
         </div>
     )
 }
@@ -216,16 +212,16 @@ function FilterDropdown() {
             <DropdownMenuTrigger asChild>
                 <Button
                     variant="outline"
-                    className="bg-mainActiveV1/10 border-mainActiveV1/20 text-mainText hover:bg-mainActiveV1/20"
+                    className="bg-mainVioletV1/10 border-mainVioletV1/20 text-mainText hover:bg-mainVioletV1/20"
                 >
                     Filter by Type <IconChevronDown className="ml-2 h-4 w-4" />
                 </Button>
             </DropdownMenuTrigger>
             <DropdownMenuContent className="bg-mainCardV1 border-mainCardV1 text-mainText">
-                <DropdownMenuItem className="hover:bg-mainActiveV1/10 cursor-pointer">All Types</DropdownMenuItem>
-                <DropdownMenuItem className="hover:bg-mainActiveV1/10 cursor-pointer">Product</DropdownMenuItem>
-                <DropdownMenuItem className="hover:bg-mainActiveV1/10 cursor-pointer">Company</DropdownMenuItem>
-                <DropdownMenuItem className="hover:bg-mainActiveV1/10 cursor-pointer">Case Studies</DropdownMenuItem>
+                <DropdownMenuItem className="hover:bg-mainVioletV1/10 cursor-pointer">All Types</DropdownMenuItem>
+                <DropdownMenuItem className="hover:bg-mainVioletV1/10 cursor-pointer">Product</DropdownMenuItem>
+                <DropdownMenuItem className="hover:bg-mainVioletV1/10 cursor-pointer">Company</DropdownMenuItem>
+                <DropdownMenuItem className="hover:bg-mainVioletV1/10 cursor-pointer">Case Studies</DropdownMenuItem>
             </DropdownMenuContent>
         </DropdownMenu>
     )
@@ -243,7 +239,7 @@ function BlogCard({ post }: { post: any }) {
                     height={300}
                     className="w-full aspect-video object-cover"
                 />
-                <div className="absolute top-3 right-3 bg-mainActiveV1 text-white text-xs font-medium py-1 px-2 rounded">
+                <div className="absolute top-3 right-3 bg-mainVioletV1 text-white text-xs font-medium py-1 px-2 rounded">
                     {post.tag}
                 </div>
             </div>

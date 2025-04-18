@@ -48,25 +48,25 @@ const featureCards = [
 
 const whyLurnyWorks = [
     {
-        icon: <IconUsers className="text-mainActiveV1" size={32} />,
+        icon: <IconUsers className="text-mainVioletV1" size={32} />,
         title: "Built for the way people actually learn",
         description:
             "We combine cognitive science, neuroscience, and learning theory to create learning experiences and tools that work.",
     },
     {
-        icon: <IconBulb className="text-mainActiveV1" size={32} />,
+        icon: <IconBulb className="text-mainVioletV1" size={32} />,
         title: "Engagement That Feels Natural",
         description:
             "Learning feels natural because we design for how people actually think, making progress effortless while tracking what matters.",
     },
     {
-        icon: <IconRobot className="text-mainActiveV1" size={32} />,
+        icon: <IconRobot className="text-mainVioletV1" size={32} />,
         title: "AI at the Core",
         description:
             "From auto-generating content to personalized learning paths, everything is powered by advanced machine learning trained on decades of learning science.",
     },
     {
-        icon: <IconSettings className="text-mainActiveV1" size={32} />,
+        icon: <IconSettings className="text-mainVioletV1" size={32} />,
         title: "Instant ROI Through Knowledge Capture",
         description:
             "We capture tacit knowledge, transform it into learning experiences, and measure impact with analytics that matter.",
@@ -112,7 +112,6 @@ export default function Product() {
 
     return (
         <div className="flex min-h-screen flex-col bg-mainBackgroundV1 text-mainText">
-            <Header />
             <main className="flex-1">
                 {/* Hero Section */}
                 <section className="relative overflow-hidden bg-mainDarkBackgroundV1 py-20">
@@ -124,14 +123,14 @@ export default function Product() {
                             className="mx-auto max-w-3xl text-center"
                         >
                             <h1 className="mb-6 text-4xl font-bold leading-tight md:text-5xl lg:text-6xl">
-                                Every<span className="text-mainActiveV1">thing</span> Learning
+                                Every<span className="text-mainVioletV1">thing</span> Learning
                             </h1>
                             <p className="mb-8 text-lg text-secondaryText md:text-xl">
                                 Lurny KAP is a next-generation, AI-powered, personalized, and multilingual—delivering learning that's
                                 instant, intelligent, and impossible to ignore.
                             </p>
                             <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
-                                <Button className="w-full bg-mainActiveV1 hover:bg-mainActiveV1/90 sm:w-auto">Get Started</Button>
+                                <Button className="w-full bg-mainVioletV1 hover:bg-mainVioletV1/90 sm:w-auto">Get Started</Button>
                                 <Button variant="outline" className="w-full border-mainCardV1 hover:bg-mainCardV1/30 sm:w-auto">
                                     Watch a Demo
                                 </Button>
@@ -163,7 +162,7 @@ export default function Product() {
                                     <TabsTrigger
                                         key={feature.id}
                                         value={feature.id}
-                                        className="data-[state=active]:bg-mainActiveV1 data-[state=active]:text-white"
+                                        className="data-[state=active]:bg-mainVioletV1 data-[state=active]:text-white"
                                     >
                                         {feature.label}
                                     </TabsTrigger>
@@ -181,10 +180,10 @@ export default function Product() {
                                                 viewport={{ once: true }}
                                                 transition={{ duration: 0.4, delay: index * 0.1 }}
                                             >
-                                                <Card className="overflow-hidden bg-mainActiveV1/20 transition-all hover:bg-mainActiveV1/30">
+                                                <Card className="overflow-hidden bg-mainVioletV1/20 transition-all hover:bg-mainVioletV1/30">
                                                     <CardContent className="p-0">
                                                         <div className="p-6">
-                                                            <Badge className="mb-4 bg-mainActiveV1 text-xs font-semibold uppercase">
+                                                            <Badge className="mb-4 bg-mainVioletV1 text-xs font-semibold uppercase">
                                                                 {card.title}
                                                             </Badge>
                                                             <p className="mb-6 text-sm">{card.description}</p>
@@ -308,7 +307,7 @@ export default function Product() {
                         </div>
 
                         <div className="mt-12 text-center">
-                            <Button className="bg-mainActiveV1 hover:bg-mainActiveV1/90">See All Solutions</Button>
+                            <Button className="bg-mainVioletV1 hover:bg-mainVioletV1/90">See All Solutions</Button>
                         </div>
                     </div>
                 </section>
@@ -342,14 +341,13 @@ export default function Product() {
                             viewport={{ once: true }}
                             transition={{ duration: 0.6 }}
                         >
-                            <h2 className="mb-2 text-3xl font-bold text-mainActiveV1 md:text-4xl">Ready to talk?</h2>
+                            <h2 className="mb-2 text-3xl font-bold text-mainVioletV1 md:text-4xl">Ready to talk?</h2>
                             <h3 className="mb-8 text-3xl font-bold text-accentColor md:text-4xl">Get in touch.</h3>
                             <Button className="bg-white text-mainDarkBackgroundV1 hover:bg-white/90">Request a Demo</Button>
                         </motion.div>
                     </div>
                 </section>
             </main>
-            <Footer />
         </div>
     )
 }

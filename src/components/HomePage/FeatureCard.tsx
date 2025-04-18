@@ -7,7 +7,7 @@ interface FeatureCardProps {
 export const FeatureCard = ({ title, description, image }: FeatureCardProps) => {
     return (
         <motion.div
-            className="bg-mainCardV1 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300"
+            className="bg-mainDarkBackgroundV1 rounded-[20px] overflow-hidden border-[2px] border-mainBorderV1 transition-all duration-300 h-full w-full"
             variants={{
                 hidden: { opacity: 0, y: 20 },
                 visible: {
