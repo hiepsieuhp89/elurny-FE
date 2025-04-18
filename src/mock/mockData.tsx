@@ -544,3 +544,66 @@ export const enterpriseData = {
     ],
     images: ["/images/sample-img.png", "/images/sample-img.png", "/images/sample-img.png", "/images/sample-img.png"],
 }
+
+export const homeSlides = [
+  {
+    id: 1,
+    title: "AI-Driven Employee Onboarding",
+    image: "/images/sample-img.png",
+    challenge: "Traditional onboarding is time-consuming inconsistent and passive",
+    solution: "New stimmy Denutst",
+    points: [
+      "Auto-generate microlessons instructional videos and quizzes in minutes for new hires",
+      "Auto-generate microlessons instructional videos and quizzes in minutes for new hires",
+      "Auto-generate microlessons instructional videos and quizzes in minutes for new hires",
+    ],
+  },
+  {
+    id: 2,
+    title: "Continuous Upskilling & Leadership Development",
+    image: "/images/sample-img.png",
+    challenge: "Traditional onboarding is time-consuming inconsistent and passive",
+    solution: "New stimmy Denutst",
+    points: [
+      "Auto-generate microlessons instructional videos and quizzes in minutes for new hires",
+      "Auto-generate microlessons instructional videos and quizzes in minutes for new hires",
+      "Auto-generate microlessons instructional videos and quizzes in minutes for new hires",
+    ],
+  },
+  {
+    id: 3,
+    title: "Compliance & Regulatory Training",
+    image: "/images/sample-img.png",
+    challenge: "Traditional onboarding is time-consuming inconsistent and passive",
+    solution: "New stimmy Denutst",
+    points: [
+      "Auto-generate microlessons instructional videos and quizzes in minutes for new hires",
+      "Auto-generate microlessons instructional videos and quizzes in minutes for new hires",
+      "Auto-generate microlessons instructional videos and quizzes in minutes for new hires",
+    ],
+  },
+  {
+    id: 4,
+    title: "Continuous Upskilling & Leadership Development",
+    image: "/images/sample-img.png",
+    challenge: "Traditional onboarding is time-consuming inconsistent and passive",
+    solution: "New stimmy Denutst",
+    points: [
+      "Auto-generate microlessons instructional videos and quizzes in minutes for new hires",
+      "Auto-generate microlessons instructional videos and quizzes in minutes for new hires",
+      "Auto-generate microlessons instructional videos and quizzes in minutes for new hires",
+    ],
+  },
+  {
+    id: 5,
+    title: "Compliance & Regulatory Training",
+    image: "/images/sample-img.png",
+    challenge: "Traditional onboarding is time-consuming inconsistent and passive",
+    solution: "New stimmy Denutst",
+    points: [
+      "Auto-generate microlessons instructional videos and quizzes in minutes for new hires",
+      "Auto-generate microlessons instructional videos and quizzes in minutes for new hires",
+      "Auto-generate microlessons instructional videos and quizzes in minutes for new hires",
+    ],
+  },
+]

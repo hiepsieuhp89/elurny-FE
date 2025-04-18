@@ -1,11 +1,16 @@
 "use client"
 
-import { useState, useEffect } from "react"
+import { useState, useEffect, useRef } from "react"
 import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import { Skeleton } from "@/components/ui/skeleton"
-import { featureCardsData } from "@/mock/mockData"
+import { featureCardsData, homeSlides } from "@/mock/mockData"
 import { IconPlayerPlayFilled } from "@tabler/icons-react"
+import { ChevronLeft, ChevronRight } from "lucide-react"
+import { Swiper, SwiperSlide } from "swiper/react"
+import { Navigation } from "swiper/modules"
+import "swiper/css"
+import "swiper/css/navigation"
 
 export default function HomePage() {
     const [isLoading, setIsLoading] = useState(true)
@@ -16,7 +21,8 @@ export default function HomePage() {
 
         return () => clearTimeout(timer)
     }, [])
-
+    const navigationPrevRef = useRef(null)
+    const navigationNextRef = useRef(null)
     const fadeIn = {
         hidden: { opacity: 0, y: 20 },
         visible: {
@@ -48,7 +54,7 @@ export default function HomePage() {
                 </div>
             </div>
 
-            <section className="relative max-w-[1440px] mx-auto mb-[150px]">
+            <div className="relative max-w-[1440px] mx-auto mb-[150px]">
                 <div className="grid grid-cols-2">
                     <div className="">
                         {isLoading ? (
@@ -107,8 +113,8 @@ export default function HomePage() {
                         </div>
                     </div>
                 </div>
-            </section>
-            <motion.section
+            </div>
+            <motion.div
                 className="max-w-[724px] mx-auto text-center mb-[50px]"
                 initial="hidden"
                 whileInView="visible"
@@ -118,8 +124,8 @@ export default function HomePage() {
                 <h1 className="text-[45px] font-medium text-white leading-[60px]">
                     Everything Your Teams Need to Upskill, Engage, and Grow
                 </h1>
-            </motion.section>
-            <section className="relative max-w-[1440px] mx-auto mb-[150px]">
+            </motion.div>
+            <div className="relative max-w-[1440px] mx-auto mb-[120px]">
                 {/* section 1 */}
                 <div className="flex items-stretch gap-[30px] mb-[30px]">
                     <div className="h-[600px] w-[800px] bg-mainDarkBackgroundV1 rounded-[20px] overflow-hidden border-[2px] border-mainBorderV1 p-[30px] flex flex-col gap-5 hover:bg-mainVioletV1 transition-all duration-300 cursor-pointer">
@@ -187,7 +193,84 @@ export default function HomePage() {
                         </div>
                     </div>
                 </div>
-            </section>
+            </div>
+            <div className="relative max-w-[1440px] mx-auto pb-[150px]">
+                <div className="flex justify-between items-center mb-[50px]">
+                    <h1 className="text-[45px] font-medium text-white leading-[60px] ">
+                        Why Enterprises Choose <span className="text-mainYellowV1">eLurny</span> to
+                        <br />
+                        Transform Workforce Learning
+                    </h1>
+                    <div className="flex gap-2 items-center">
+                        <button
+                            ref={navigationPrevRef}
+                            className="w-11 h-11 rounded-full bg-[#A2A2A2] flex items-center justify-center hover:bg-gray-600 transition-colors text-white"
+                            aria-label="Previous slide"
+                        >
+                            <ChevronLeft className="w-6 h-6" />
+                        </button>
+                        <button
+                            ref={navigationNextRef}
+                            className="w-11 h-11 rounded-full bg-mainYellowV1 flex items-center justify-center hover:bg-mainYellowV1/90 transition-colors"
+                            aria-label="Next slide"
+                        >
+                            <ChevronRight className="w-6 h-6" />
+                        </button>
+                    </div>
+                </div>
+
+                <Swiper
+                    modules={[Navigation]}
+                    spaceBetween={20}
+                    slidesPerView={1}
+                    navigation={{
+                        prevEl: navigationPrevRef.current,
+                        nextEl: navigationNextRef.current,
+                    }}
+                    onBeforeInit={(swiper) => {
+                        // @ts-ignore
+                        swiper.params.navigation.prevEl = navigationPrevRef.current
+                        // @ts-ignore
+                        swiper.params.navigation.nextEl = navigationNextRef.current
+                    }}
+                    breakpoints={{
+                        768: {
+                            slidesPerView: 2,
+                        },
+                        1024: {
+                            slidesPerView: 3,
+                        },
+                    }}
+                    className="!overflow-visible"
+                >
+                    <div className="swiper-wrapper !h-auto">
+                        {homeSlides.map((slide) => (
+                            <SwiperSlide key={slide.id} className="!h-auto">
+                                <div className={`rounded-[20px] border-[2px] cursor-pointer hover:bg-[#6E30A2] transition-all duration-300 border-mainBorderV1 bg-mainBackgroundV1 overflow-hidden h-full flex flex-col`}>
+                                    <div className="h-[250px] relative">
+                                        <img src={slide.image} alt={slide.title} className="object-cover w-full h-full" />
+                                    </div>
+                                    <div className="p-[30px] flex flex-col gap-[15px] flex-grow">
+                                        <h2 className="text-[26px] font-medium text-white">{slide.title}</h2>
+                                        <div className="flex flex-col gap-[10px]">
+                                            <h3 className="text-mainYellowV1 font-medium text-xl">Challenge</h3>
+                                            <p className="text-mainGrayV1 text-lg font-nmedium">{slide.challenge}</p>
+                                        </div>
+                                        <div className="flex flex-col gap-[10px]">
+                                            <h3 className="text-mainYellowV1 font-semibold text-xl">{slide.solution}</h3>
+                                            <ol className="list-decimal pl-5 space-y-2">
+                                                {slide.points.map((point, index) => (
+                                                    <li key={index} className="text-mainGrayV1 text-lg font-nmedium">{point}</li>
+                                                ))}
+                                            </ol>
+                                        </div>
+                                    </div>
+                                </div>
+                            </SwiperSlide>
+                        ))}
+                    </div>
+                </Swiper>
+            </div>
         </div>
     )
 }
